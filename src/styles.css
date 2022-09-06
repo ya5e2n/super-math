@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: snow;
+  /* padding: 20px; */
+
+  display: flex;
+  justify-content: center;
+}
+
+.header-items {
+  /* background-color: rgb(255, 160, 122, 0.9); */
+  background-color: lightblue;
+  padding: 15px 70px;
+  margin: 5px 10px;
+
+  border-radius: 10px;
+  border-style: none;
+
+  min-width: 200px;
+  text-align: center;
+
+  transition: opacity 300ms;
+}
+
+.header-items.start {
+  background-color: darkseagreen;
+}
+
+.header-items.start:hover {
+  opacity: 0.75;
+}
+
+.header-items.start:active {
+  opacity: 0.25;
+}
+
+.header-items:hover {
+  opacity: 0.75;
+}
+
+.header-items:active {
+  opacity: 0.45;
+}
+
+#reset {
+  background-color: rgb(240, 128, 128, 0.9);
+}
+
+#reset:hover {
+  opacity: 0.75;
+}
+
+#reset:active {
+  opacity: 0.5;
+}
+
+main {
+  padding: 20px;
+  background-color: lightcyan;
+  transition: background-color 500ms;
+}
+
+main.wrong {
+  background-color: pink;
+  transition: background-color 300ms;
+}
+
+main.correct {
+  background-color: rgb(173, 255, 47, 0.35);
+  transition: background-color 300ms;
+}
+
+#problem-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 5px dashed darkseagreen;
+  border-radius: 10px;
+
+  padding: 10px;
+  margin: auto;
+
+  min-width: 400px;
+  max-width: fit-content;
+  min-height: 120px;
+}
+
+.problem {
+  padding: 20px;
+  color: darkseagreen;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#answer-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 20px;
+  margin: 10px;
+}
+
+.answer {
+  border-radius: 10px;
+  border-style: none;
+
+  font-size: 45px;
+  color: white;
+
+  padding: 20px;
+  height: 100px;
+  min-width: 300px;
+  width: fit-content;
+
+  /* background-color: rgb(147, 239, 211, .75); */
+  background-color: rgb(211, 211, 211, 0.45);
+  scale: 1;
+  transition: background-color, scale 500ms;
+}
+
+.answer.wrong {
+  animation: shake 300ms;
+  background-color: rgb(255, 0, 0, 0.25);
+  scale: 0.8;
+  transition: background-color, scale 500ms;
+}
+
+.answer.correct {
+  background-color: rgb(0, 128, 0, 0.35);
+  scale: 1.2;
+  transition: background-color, scale 300ms;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  justify-content: center;
+  align-content: center;
+}
+
+.num,
+.escape,
+.enter {
+  background-color: rgb(64, 224, 208, 0.7);
+  border: none;
+  border-radius: 20px;
+
+  font-size: 20px;
+  color: black;
+
+  margin: 2px;
+  padding: 30px;
+  cursor: pointer;
+
+  transition: scale 300ms;
+}
+
+.num:hover {
+  background-color: rgb(64, 224, 208, 0.5);
+
+  scale: 1.1;
+}
+
+.num:active {
+  background-color: rgb(64, 224, 208, 0.25);
+}
+
+.escape {
+  grid-column: span 2;
+  background-color: rgb(255, 192, 203);
+
+  transition: scale 300ms;
+}
+
+.escape:hover {
+  background-color: rgb(255, 192, 203, 0.75);
+
+  scale: 1.1;
+}
+
+.escape:active {
+  background-color: rgb(255, 192, 203, 0.5);
+}
+
+.enter {
+  grid-column: span 3;
+  background-color: rgb(144, 238, 144, 0.9);
+
+  transition: scale 300ms;
+}
+
+.enter:hover {
+  grid-column: span 3;
+  background-color: rgb(144, 238, 144, 0.5);
+
+  scale: 1.1;
+
+  /* animation: shake 0.3s */
+}
+
+.enter:active {
+  grid-column: span 3;
+  background-color: rgb(144, 238, 144, 0.25);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
