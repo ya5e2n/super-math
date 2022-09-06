@@ -14,11 +14,15 @@ header {
 
   display: flex;
   justify-content: center;
+
+  /* width: 50vw; */
+  margin: auto;
 }
 
 .header-items {
   /* background-color: rgb(255, 160, 122, 0.9); */
   background-color: lightblue;
+
   padding: 15px 70px;
   margin: 5px 10px;
 
@@ -29,6 +33,20 @@ header {
   text-align: center;
 
   transition: opacity 300ms;
+}
+
+@media screen and (max-width: 480px) {
+  .header-items {
+    padding: 10px 5px;
+    min-width: 100px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .header-items {
+    padding: 15px 55px;
+    min-width: 150px;
+  }
 }
 
 .header-items.start {
@@ -67,6 +85,9 @@ main {
   padding: 20px;
   background-color: lightcyan;
   transition: background-color 500ms;
+
+  width: 100vw;
+  height: 100vh;
 }
 
 main.wrong {
@@ -87,12 +108,13 @@ main.correct {
   border: 5px dashed darkseagreen;
   border-radius: 10px;
 
-  padding: 10px;
   margin: auto;
 
-  min-width: 400px;
+  /* min-width: 400px;
   max-width: fit-content;
-  min-height: 120px;
+  min-height: 120px; */
+
+  width: 90vw;
 }
 
 .problem {
