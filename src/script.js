@@ -9,10 +9,15 @@ const operation = document.querySelector("#operation");
 const score = document.querySelector("#score");
 const mainContainer = document.querySelector(".main-container");
 const timer = document.querySelector("#timer");
+const popup = document.querySelector(".summary-popup-container");
+const popupClose = document.querySelector(".popup-close");
+const popupScore = document.querySelector(".popup-score");
+const popupCorrect = document.querySelector(".popup-correct");
 
 score.innerHTML = 0;
 var countCorrect = 0;
 var gameTimer = "";
+var timerLimit = 60;
 
 function randomIntBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -115,6 +120,23 @@ function checkAnswer() {
   }
 }
 
+function resetGame() {
+  console.log("Answer field cleared...");
+  answerField.innerHTML = "";
+
+  num1.innerHTML = "";
+  num2.innerHTML = "";
+  operation.innerHTML = "Ready?";
+
+  score.innerHTML = "Start!";
+  score.classList.add("start");
+
+  timer.innerHTML = "Timer";
+  timer.classList.remove("ten", "thirty", "sixty");
+
+  clearInterval(gameTimer);
+}
+
 number.forEach((num) => {
   num.addEventListener("click", () => {
     answerField.innerHTML += num.innerHTML;
@@ -133,39 +155,50 @@ escapeButton.addEventListener("click", () => {
   console.log(answerField.innerHTML);
 });
 
-reset.addEventListener("click", () => {
-  console.log("Answer field cleared...");
-  answerField.innerHTML = "";
-
-  num1.innerHTML = "";
-  num2.innerHTML = "";
-  operation.innerHTML = "Ready?";
-
-  score.innerHTML = "Start!";
-  score.classList.add("start");
-
-  timer.innerHTML = "Timer";
-  clearInterval(gameTimer);
-});
+reset.addEventListener("click", resetGame);
 
 score.addEventListener("click", () => {
   if (score.innerHTML === "Start!") {
     score.innerHTML = 0;
+    answerField.innerHTML = "";
     score.classList.remove("start");
+    timer.classList.add("sixty");
+
     newEquation();
 
-    timer.innerHTML = 5;
+    timer.innerHTML = timerLimit;
 
     gameTimer = setInterval(() => {
       timer.innerHTML--;
-      console.log(timer.innerHTML);
 
-      if (Number(timer.innerHTML) <= 0) {
-        clearInterval(gameTimer);
-        timer.innerHTML = "Timer";
+      switch (true) {
+        case Number(timer.innerHTML) === 0:
+          console.log("score:", score.innerHTML);
+          console.log("count correct:", countCorrect);
+
+          // gameCompletePopup();
+          popupScore.innerHTML = score.innerHTML;
+          popupCorrect.innerHTML = countCorrect;
+          popup.classList.add("show");
+
+          resetGame();
+          break;
+        case Number(timer.innerHTML) < 10:
+          timer.classList.add("ten");
+          break;
+        case Number(timer.innerHTML) < 30:
+          timer.classList.add("thirty");
+          break;
+        case Number(timer.innerHTML) <= 60:
+          timer.classList.add("sixty");
+          break;
       }
     }, 1000);
   }
+});
+
+popupClose.addEventListener("click", () => {
+  popup.classList.remove("show");
 });
 
 operation.innerHTML = "Ready?";

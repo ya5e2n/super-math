@@ -35,20 +35,6 @@ header {
   transition: opacity 300ms;
 }
 
-@media screen and (max-width: 480px) {
-  .header-items {
-    padding: 10px 5px;
-    min-width: 100px;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 720px) {
-  .header-items {
-    padding: 15px 55px;
-    min-width: 150px;
-  }
-}
-
 .header-items.start {
   background-color: darkseagreen;
 }
@@ -81,6 +67,21 @@ header {
   opacity: 0.5;
 }
 
+#timer.sixty {
+  background-color: green;
+  opacity: 0.8;
+}
+
+#timer.thirty {
+  background-color: orange;
+  opacity: 0.8;
+}
+
+#timer.ten {
+  background-color: red;
+  opacity: 0.8;
+}
+
 main {
   padding: 20px;
   background-color: lightcyan;
@@ -110,11 +111,9 @@ main.correct {
 
   margin: auto;
 
-  /* min-width: 400px;
+  min-width: 400px;
   max-width: fit-content;
-  min-height: 120px; */
-
-  width: 90vw;
+  min-height: 120px;
 }
 
 .problem {
@@ -230,13 +229,78 @@ main.correct {
   background-color: rgb(144, 238, 144, 0.5);
 
   scale: 1.1;
-
-  /* animation: shake 0.3s */
 }
 
 .enter:active {
   grid-column: span 3;
   background-color: rgb(144, 238, 144, 0.25);
+}
+
+.summary-popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: rgb(135, 206, 250);
+
+  width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.summary-popup-container.show {
+  visibility: visible;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.popup-close:hover {
+  color: white;
+}
+
+.popup-close:active {
+  color: gray;
+}
+
+@media screen and (max-width: 480px) {
+  .header-items {
+    padding: 15px 5px;
+    min-width: 100px;
+  }
+
+  #problem-block {
+    min-width: 300px;
+    max-width: fit-content;
+    min-height: 120px;
+  }
+
+  .summary-popup-container {
+    width: 325px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .header-items {
+    padding: 15px 50px;
+    min-width: 150px;
+  }
+
+  .summary-popup-container {
+    width: 400px;
+  }
 }
 
 @keyframes shake {
