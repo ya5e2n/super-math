@@ -275,6 +275,63 @@ main.correct {
   color: gray;
 }
 
+.share-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.share-icons a {
+  margin: 10px;
+  border-radius: 50%;
+
+  height: 40px;
+  width: 40px;
+
+  font-size: 20px;
+
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.facebook-link {
+  background-color: #4267b2;
+}
+.facebook-link:hover {
+  color: #4267b2;
+  background-color: white;
+}
+.facebook-link:active {
+  color: #4267b2;
+  background-color: lightgray;
+}
+.twitter-link {
+  background-color: #1da1f2;
+}
+.twitter-link:hover {
+  color: #1da1f2;
+  background-color: white;
+}
+.twitter-link:active {
+  color: #1da1f2;
+  background-color: lightgray;
+}
+.email-link {
+  background-color: lightsalmon;
+}
+.email-link:hover {
+  color: lightsalmon;
+  background-color: white;
+}
+.email-link:active {
+  color: lightsalmon;
+  background-color: lightgray;
+}
+
 @media screen and (max-width: 480px) {
   .header-items {
     padding: 15px 5px;
