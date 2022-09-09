@@ -163,6 +163,7 @@ score.addEventListener("click", () => {
     answerField.innerHTML = "";
     score.classList.remove("start");
     timer.classList.add("sixty");
+    popup.classList.remove("show");
 
     newEquation();
 
