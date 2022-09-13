@@ -29,7 +29,8 @@ header {
   border-radius: 10px;
   border-style: none;
 
-  min-width: 200px;
+  width: 200px;
+  height: 50px;
   text-align: center;
 
   transition: opacity 300ms;
@@ -67,19 +68,34 @@ header {
   opacity: 0.5;
 }
 
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #timer.sixty {
   background-color: green;
   opacity: 0.8;
+  color: white;
+
+  font-size: 25px;
 }
 
 #timer.thirty {
   background-color: orange;
   opacity: 0.8;
+  color: white;
+
+  font-size: 35px;
 }
 
 #timer.ten {
   background-color: red;
   opacity: 0.8;
+  color: white;
+
+  font-size: 45px;
 }
 
 main {
@@ -88,7 +104,7 @@ main {
   transition: background-color 500ms;
 
   width: 100vw;
-  height: 100vh;
+  height: 95vh;
 }
 
 main.wrong {
@@ -337,7 +353,7 @@ main.correct {
 @media screen and (max-width: 480px) {
   .header-items {
     padding: 15px 5px;
-    min-width: 100px;
+    width: 100px;
   }
 
   #problem-block {
@@ -354,7 +370,7 @@ main.correct {
 @media screen and (min-width: 480px) and (max-width: 720px) {
   .header-items {
     padding: 15px 50px;
-    min-width: 150px;
+    width: 150px;
   }
 
   .summary-popup-container {
