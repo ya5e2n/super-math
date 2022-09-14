@@ -10,17 +10,18 @@ body {
 
 header {
   background-color: snow;
-  /* padding: 20px; */
 
   display: flex;
   justify-content: center;
 
-  /* width: 50vw; */
   margin: auto;
 }
 
 .header-items {
-  /* background-color: rgb(255, 160, 122, 0.9); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: lightblue;
 
   padding: 15px 70px;
@@ -29,7 +30,7 @@ header {
   border-radius: 10px;
   border-style: none;
 
-  width: 200px;
+  width: 100px;
   height: 50px;
   text-align: center;
 
@@ -68,11 +69,11 @@ header {
   opacity: 0.5;
 }
 
-#timer {
+/* #timer {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 #timer.sixty {
   background-color: green;
@@ -101,10 +102,12 @@ header {
 main {
   padding: 20px;
   background-color: lightcyan;
+  background-size: cover;
+  background-position: center;
   transition: background-color 500ms;
 
   width: 100vw;
-  height: 95vh;
+  height: 90vh;
 }
 
 main.wrong {
@@ -160,7 +163,7 @@ main.correct {
 
   padding: 20px;
   height: 100px;
-  min-width: 300px;
+  min-width: 400px;
   width: fit-content;
 
   /* background-color: rgb(147, 239, 211, .75); */
@@ -184,7 +187,9 @@ main.correct {
 
 .number-grid {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+
   justify-content: center;
   align-content: center;
 }
@@ -217,7 +222,7 @@ main.correct {
 }
 
 .escape {
-  grid-column: span 2;
+  grid-column: span 3;
   background-color: rgb(255, 192, 203);
 
   transition: scale 300ms;
@@ -234,21 +239,23 @@ main.correct {
 }
 
 .enter {
-  grid-column: span 3;
+  grid-row: span 3;
   background-color: rgb(144, 238, 144, 0.9);
 
   transition: scale 300ms;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .enter:hover {
-  grid-column: span 3;
   background-color: rgb(144, 238, 144, 0.5);
 
   scale: 1.1;
 }
 
 .enter:active {
-  grid-column: span 3;
   background-color: rgb(144, 238, 144, 0.25);
 }
 
@@ -350,10 +357,15 @@ main.correct {
   background-color: lightgray;
 }
 
+@media screen and (min-width: 480px) and (max-width: 720px) {
+  .summary-popup-container {
+    width: 400px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .header-items {
     padding: 15px 5px;
-    width: 100px;
   }
 
   #problem-block {
@@ -365,16 +377,40 @@ main.correct {
   .summary-popup-container {
     width: 325px;
   }
+
+  .number-grid {
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows: repeat(4, 90px);
+  }
+
+  .answer {
+    min-width: 300px;
+  }
 }
 
-@media screen and (min-width: 480px) and (max-width: 720px) {
+@media screen and (max-width: 360px) {
   .header-items {
-    padding: 15px 50px;
-    width: 150px;
+    padding: 15px 5px;
+  }
+
+  #problem-block {
+    min-width: 200px;
+    max-width: fit-content;
+    min-height: 120px;
+  }
+
+  .answer {
+    min-width: 225px;
   }
 
   .summary-popup-container {
-    width: 400px;
+    width: 260px;
+  }
+
+  .number-grid {
+    grid-template-columns: repeat(4, 65px);
+    grid-template-rows: repeat(4, 65px);
+
   }
 }
 
