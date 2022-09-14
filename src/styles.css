@@ -357,6 +357,18 @@ main.correct {
   background-color: lightgray;
 }
 
+.text-link {
+  background-color: #53d769;
+}
+.text-link:hover {
+  color: #53d769;
+  background-color: white;
+}
+.text-link:active {
+  color: lightsalmon;
+  background-color: lightgray;
+}
+
 @media screen and (min-width: 480px) and (max-width: 720px) {
   .summary-popup-container {
     width: 400px;
@@ -410,7 +422,6 @@ main.correct {
   .number-grid {
     grid-template-columns: repeat(4, 65px);
     grid-template-rows: repeat(4, 65px);
-
   }
 }
 
