@@ -183,6 +183,7 @@ score.addEventListener("click", () => {
 
           smsMessage.href = `sms:?&body=I just scored ${score.innerHTML} in this awesome math game! What's your high score? https://www.justmathgames.com`;
           emailMessage.href = `mailto:?subject=Just Math Games!&body=I just scored ${score.innerHTML} in this awesome math game! What's your high score? https://www.justmathgames.com`;
+          twitterMessage.href = `https://twitter.com/intent/tweet?text=I just scored ${score.innerHTML} in this awesome math game! What's your high score? https://www.justmathgames.com`;
 
           // gameCompletePopup();
           popupScore.innerHTML = score.innerHTML;

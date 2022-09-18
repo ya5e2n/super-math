@@ -222,7 +222,7 @@ main.correct {
 }
 
 .escape {
-  grid-column: span 3;
+  grid-column: span 2;
   background-color: rgb(255, 192, 203);
 
   transition: scale 300ms;
@@ -236,6 +236,10 @@ main.correct {
 
 .escape:active {
   background-color: rgb(255, 192, 203, 0.5);
+}
+
+#zero {
+  grid-column: span 2;
 }
 
 .enter {
