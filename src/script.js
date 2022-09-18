@@ -12,7 +12,11 @@ const number = document.querySelectorAll(".num"),
   popup = document.querySelector(".summary-popup-container"),
   popupClose = document.querySelector(".popup-close"),
   popupScore = document.querySelector(".popup-score"),
-  popupCorrect = document.querySelector(".popup-correct");
+  popupCorrect = document.querySelector(".popup-correct"),
+  smsMessage = document.querySelector(".text-link"),
+  twitterMessage = document.querySelector(".twitter-link"),
+  facebookMessage = document.querySelector(".facebook-link"),
+  emailMessage = document.querySelector(".email-link");
 
 score.innerHTML = 0;
 var countCorrect = 0;
@@ -176,6 +180,9 @@ score.addEventListener("click", () => {
         case Number(timer.innerHTML) === 0:
           console.log("score:", score.innerHTML);
           console.log("count correct:", countCorrect);
+
+          smsMessage.href = `sms:?&body=I just scored ${score.innerHTML} in this awesome math game! What's your high score? https://www.justmathgames.com`;
+          emailMessage.href = `mailto:?subject=Just Math Games!&body=I just scored ${score.innerHTML} in this awesome math game! What's your high score? https://www.justmathgames.com`;
 
           // gameCompletePopup();
           popupScore.innerHTML = score.innerHTML;
