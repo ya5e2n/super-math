@@ -96,7 +96,7 @@ function checkAnswer() {
       break;
   }
 
-  if (answer == userAnswer) {
+  if (answer === userAnswer) {
     console.log("User answered correctly!");
     score.innerHTML = Number(score.innerHTML) + 100;
     countCorrect++;
@@ -164,6 +164,7 @@ reset.addEventListener("click", resetGame);
 score.addEventListener("click", () => {
   if (score.innerHTML === "Start!") {
     score.innerHTML = 0;
+    countCorrect = 0;
     answerField.innerHTML = "";
     score.classList.remove("start");
     timer.classList.add("sixty");
@@ -208,6 +209,7 @@ score.addEventListener("click", () => {
 
 popupClose.addEventListener("click", () => {
   popup.classList.remove("show");
+  countCorrect = 0;
 });
 
 operation.innerHTML = "Ready?";
