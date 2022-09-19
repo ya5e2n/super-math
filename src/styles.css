@@ -417,13 +417,13 @@ main.correct {
   }
 
   #problem-block {
-    min-width: 300px;
+    min-width: 275px;
     max-width: fit-content;
     min-height: 120px;
   }
 
   .answer {
-    min-width: 225px;
+    min-width: 275px;
   }
 
   .summary-popup-container {
