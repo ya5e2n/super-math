@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  touch-action: manipulation;
 }
 
 body {
@@ -373,6 +375,11 @@ main.correct {
   background-color: lightgray;
 }
 
+#version {
+  text-align: center;
+  color: lightblue;
+}
+
 @media screen and (min-width: 480px) and (max-width: 720px) {
   .summary-popup-container {
     width: 400px;
@@ -404,13 +411,13 @@ main.correct {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
   .header-items {
     padding: 15px 5px;
   }
 
   #problem-block {
-    min-width: 200px;
+    min-width: 300px;
     max-width: fit-content;
     min-height: 120px;
   }
@@ -424,8 +431,8 @@ main.correct {
   }
 
   .number-grid {
-    grid-template-columns: repeat(4, 65px);
-    grid-template-rows: repeat(4, 65px);
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
   }
 }
 
