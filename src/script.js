@@ -16,7 +16,11 @@ const number = document.querySelectorAll(".num"),
   smsMessage = document.querySelector(".text-link"),
   twitterMessage = document.querySelector(".twitter-link"),
   facebookMessage = document.querySelector(".facebook-link"),
-  emailMessage = document.querySelector(".email-link");
+  emailMessage = document.querySelector(".email-link"),
+  version = document.querySelector("#version");
+
+// *** App Version ***
+version.innerHTML = "v0.0.21";
 
 score.innerHTML = 0;
 var countCorrect = 0;

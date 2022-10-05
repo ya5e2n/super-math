@@ -10,6 +10,27 @@ body {
   padding: 0;
 }
 
+.error-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+  background-color: lightskyblue;
+  width: 360px;
+
+  margin: auto;
+  padding: 10px;
+
+  border-radius: 10px;
+}
+
+.error-message {
+  color: whitesmoke;
+}
+
 header {
   background-color: snow;
 
@@ -110,6 +131,11 @@ main {
 
   width: 100vw;
   height: 90vh;
+}
+
+.main-error {
+  width: 100vw;
+  height: 97.2vh;
 }
 
 main.wrong {
@@ -433,6 +459,9 @@ main.correct {
   .number-grid {
     grid-template-columns: repeat(4, 70px);
     grid-template-rows: repeat(4, 70px);
+  }
+  .error-container {
+    width: 260px;
   }
 }
 
