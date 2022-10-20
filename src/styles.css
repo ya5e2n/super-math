@@ -5,6 +5,11 @@
   touch-action: manipulation;
 }
 
+a {
+  text-decoration: none;
+  color: lightseagreen;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -403,8 +408,30 @@ main.correct {
 
 #version {
   text-align: center;
-  color: lightblue;
+  color: white;
 }
+
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 3px 5px;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
+/* .nav-item a:link {
+  color: gray;
+} */
 
 @media screen and (min-width: 480px) and (max-width: 720px) {
   .summary-popup-container {
@@ -499,4 +526,40 @@ main.correct {
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
+}
+
+.about-body,
+.careers-body,
+.future-body,
+.contact-body {
+  background-color: lightcyan;
+}
+
+.about-title,
+.careers-title,
+.future-title,
+.contact-title {
+  color: lightseagreen;
+}
+
+.about-main,
+.careers-main,
+.future-main,
+.contact-main {
+  padding: 5px 15px;
+}
+
+/* About Us Page */
+/* .about-main-content {
+  width: 600px;
+  margin: auto;
+} */
+
+/* Footer */
+footer {
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: lightblue;
 }
