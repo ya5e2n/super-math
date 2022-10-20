@@ -550,10 +550,9 @@ main.correct {
 }
 
 /* About Us Page */
-/* .about-main-content {
-  width: 600px;
-  margin: auto;
-} */
+.about-main {
+  padding-bottom: 75px;
+}
 
 /* Footer */
 footer {
