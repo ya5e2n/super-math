@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7LZC0LNGPV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-7LZC0LNGPV");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5858552512201956"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <meta name="description" content="Put your math skills to the test!" />
+    <title>Just Math Games!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div id="reset" class="header-items">Reset</div>
+      <div id="score" class="header-items">Score</div>
+      <div id="timer" class="header-items">Timer</div>
+    </header>
+
+    <main class="main-container">
+      <div id="problem-block">
+        <div class="problem" id="num1"></div>
+        <div class="problem" id="operation"></div>
+        <div class="problem" id="num2"></div>
+      </div>
+
+      <div id="answer-block">
+        <div class="answer"></div>
+      </div>
+
+      <div class="summary-popup-container">
+        <h1>Times Up!</h1>
+        <div class="popup-close">&times;</div>
+        <h2>Score</h2>
+        <div class="popup-score">10</div>
+        <h2>Number Correct</h2>
+        <div class="popup-correct">50</div>
+        <div class="share-icons">
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https://justmathgames.com"
+            target="_blank"
+            class="facebook-link"
+          >
+            <i class="uil uil-facebook"></i>
+          </a>
+
+          <a href="" target="_blank" class="twitter-link">
+            <i class="uil uil-twitter"></i>
+          </a>
+
+          <a
+            href="sms:?&body=Check out this awesome math game! https://justmathgames.com"
+            target="_blank"
+            class="text-link"
+          >
+            <i class="uil uil-comment"></i>
+          </a>
+
+          <a
+            href="mailto:?subject=Super Math&body=Check out this awesome math game! https://justmathgames.com"
+            target="_blank"
+            class="email-link"
+          >
+            <i class="uil uil-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="number-grid">
+        <button class="num">1</button>
+        <button class="num">2</button>
+        <button class="num">3</button>
+        <button class="enter">ENTER</button>
+        <button class="num">4</button>
+        <button class="num">5</button>
+        <button class="num">6</button>
+        <button class="num">7</button>
+        <button class="num">8</button>
+        <button class="num">9</button>
+        <button class="num" id="zero">0</button>
+        <button class="escape">DELETE</button>
+      </div>
+    </main>
+
+    <footer>
+      <ul class="nav-ul">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item">|</li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item">|</li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+        <li class="nav-item">|</li>
+        <li class="nav-item"><a href="careers.html">Careers</a></li>
+        <li class="nav-item">|</li>
+        <li class="nav-item"><a href="future.html">Future</a></li>
+      </ul>
+      <div id="version"></div>
+    </footer>
+  </body>
+</html>
