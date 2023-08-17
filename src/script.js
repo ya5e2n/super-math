@@ -20,7 +20,7 @@ const number = document.querySelectorAll(".num"),
   version = document.querySelector("#version");
 
 // *** App Version ***
-version.innerHTML = "v0.0.23";
+version.innerHTML = "v0.0.24";
 
 score.innerHTML = 0;
 var countCorrect = 0;
