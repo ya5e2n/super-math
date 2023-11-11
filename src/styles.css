@@ -557,7 +557,7 @@ main.correct {
 /* Footer */
 footer {
   margin: 0;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   width: 100%;
   background: lightblue;
