@@ -45,6 +45,10 @@ header {
   margin: auto;
 }
 
+#start {
+  width: 350px;
+}
+
 .header-items {
   display: flex;
   justify-content: center;

@@ -6,6 +6,7 @@ const number = document.querySelectorAll(".num"),
   num1 = document.querySelector("#num1"),
   num2 = document.querySelector("#num2"),
   operation = document.querySelector("#operation"),
+  start = document.querySelector("#start"),
   score = document.querySelector("#score"),
   mainContainer = document.querySelector(".main-container"),
   timer = document.querySelector("#timer"),
@@ -26,6 +27,10 @@ score.innerHTML = 0;
 var countCorrect = 0;
 var gameTimer = "";
 var timerLimit = 60;
+
+reset.style.display = "none";
+score.style.display = "none";
+timer.style.display = "none";
 
 function randomIntBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -136,13 +141,20 @@ function resetGame() {
   num2.innerHTML = "";
   operation.innerHTML = "Ready?";
 
-  score.innerHTML = "Start!";
   score.classList.add("start");
 
   timer.innerHTML = "Timer";
   timer.classList.remove("ten", "thirty", "sixty");
 
   clearInterval(gameTimer);
+
+  // Hide the reset, score, and timer buttons
+  reset.style.display = "none";
+  score.style.display = "none";
+  timer.style.display = "none";
+
+  // Show the start button
+  start.style.display = "block";
 }
 
 number.forEach((num) => {
@@ -165,8 +177,17 @@ escapeButton.addEventListener("click", () => {
 
 reset.addEventListener("click", resetGame);
 
-score.addEventListener("click", () => {
-  if (score.innerHTML === "Start!") {
+start.addEventListener("click", () => {
+  console.log("CLICK!!");
+  if (start.innerHTML === "Start!") {
+    console.log("inside if bro");
+
+    start.style.display = "none";
+
+    reset.style.display = "block";
+    score.style.display = "block";
+    timer.style.display = "block";
+
     score.innerHTML = 0;
     countCorrect = 0;
     answerField.innerHTML = "";
@@ -217,5 +238,5 @@ popupClose.addEventListener("click", () => {
 });
 
 operation.innerHTML = "Ready?";
-score.innerHTML = "Start!";
-score.classList.add("start");
+start.innerHTML = "Start!";
+start.classList.add("start");
