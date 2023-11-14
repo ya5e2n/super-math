@@ -452,7 +452,7 @@ main.correct {
 
 @media screen and (max-width: 480px) {
   .header-items {
-    padding: 15px 5px;
+    line-height: 50px;
   }
 
   #problem-block {
@@ -477,7 +477,7 @@ main.correct {
 
 @media screen and (max-width: 380px) {
   .header-items {
-    padding: 15px 5px;
+    line-height: 50px;
   }
 
   #problem-block {
