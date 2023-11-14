@@ -21,16 +21,11 @@ const number = document.querySelectorAll(".num"),
   version = document.querySelector("#version");
 
 // *** App Version ***
-version.innerHTML = "v0.0.26";
+version.innerHTML = "v0.0.27";
 
-score.innerHTML = 0;
 var countCorrect = 0;
 var gameTimer = "";
 var timerLimit = 60;
-
-reset.style.display = "none";
-score.style.display = "none";
-timer.style.display = "none";
 
 function randomIntBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -238,5 +233,10 @@ popupClose.addEventListener("click", () => {
 });
 
 operation.innerHTML = "Ready?";
+score.innerHTML = 0;
 start.innerHTML = "Start!";
 start.classList.add("start");
+
+reset.style.display = "none";
+score.style.display = "none";
+timer.style.display = "none";

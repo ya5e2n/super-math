@@ -41,29 +41,23 @@ header {
 
   display: flex;
   justify-content: center;
-
-  margin: auto;
-}
-
-#start {
-  width: 350px;
+  align-items: center;
 }
 
 .header-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   background-color: lightblue;
 
-  padding: 15px 70px;
-  margin: 5px 10px;
+  margin: 5px 20px;
 
   border-radius: 10px;
   border-style: none;
 
-  width: 100px;
+  width: 150px;
   height: 50px;
+
+  /* To keep text vertically centered, height should equal line-height */
+  line-height: 50px;
+
   text-align: center;
 
   transition: opacity 300ms;
@@ -89,8 +83,15 @@ header {
   opacity: 0.45;
 }
 
+#start {
+  width: 350px;
+  display: block;
+  text-align: center;
+}
+
 #reset {
   background-color: rgb(240, 128, 128, 0.9);
+  display: block;
 }
 
 #reset:hover {
@@ -101,11 +102,17 @@ header {
   opacity: 0.5;
 }
 
-/* #timer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+#timer.sixty:hover,
+#timer.thirty:hover,
+#timer.ten:hover {
+  opacity: 0.75;
+}
+
+#timer.sixty:active,
+#timer.thirty:active,
+#timer.ten:active {
+  opacity: 0.5;
+}
 
 #timer.sixty {
   background-color: green;
