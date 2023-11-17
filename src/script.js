@@ -21,11 +21,12 @@ const number = document.querySelectorAll(".num"),
   version = document.querySelector("#version");
 
 // *** App Version ***
-version.innerHTML = "v0.0.30";
+version.innerHTML = "v0.0.31";
 
 var countCorrect = 0;
 var gameTimer = "";
 var timerLimit = 60;
+var buttonAnimationMs = 200;
 
 function randomIntBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -154,18 +155,33 @@ function resetGame() {
 
 number.forEach((num) => {
   num.addEventListener("click", () => {
+    num.classList.toggle("scaled");
+    setTimeout(() => {
+      num.classList.toggle("scaled");
+    }, buttonAnimationMs);
+
     answerField.innerHTML += num.innerHTML;
     console.log(answerField.innerHTML);
   });
 });
 
 enter.addEventListener("click", () => {
+  enter.classList.toggle("scaled");
+  setTimeout(() => {
+    enter.classList.toggle("scaled");
+  }, buttonAnimationMs);
+
   if (score.innerHTML !== "Start!") {
     checkAnswer();
   }
 });
 
 escapeButton.addEventListener("click", () => {
+  escapeButton.classList.toggle("scaled");
+  setTimeout(() => {
+    escapeButton.classList.toggle("scaled");
+  }, buttonAnimationMs);
+
   answerField.innerHTML = answerField.innerHTML.slice(0, -1);
   console.log(answerField.innerHTML);
 });
