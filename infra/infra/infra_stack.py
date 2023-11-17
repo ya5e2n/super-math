@@ -1,6 +1,8 @@
 from aws_cdk import Stack, aws_s3 as s3, aws_s3_deployment as s3_deploy
 from constructs import Construct
 
+import subprocess
+
 
 class InfraStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
@@ -12,9 +14,5 @@ class InfraStack(Stack):
             self, "StaticSiteBucket", bucket_name=bucket_name
         )
 
-        s3_deploy.BucketDeployment(
-            self,
-            "BucketDeploy",
-            destination_bucket=site_bucket,
-            sources=[s3_deploy.Source.asset(path="../src")],
-        )
+        print("Syncing files to S3 bucket...")
+        subprocess.run(f"aws s3 sync ../src/ s3://{bucket_name}", shell=True)
