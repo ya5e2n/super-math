@@ -210,7 +210,6 @@ main.correct {
   min-width: 400px;
   width: fit-content;
 
-  /* background-color: rgb(147, 239, 211, .75); */
   background-color: rgb(211, 211, 211, 0.45);
   scale: 1;
   transition: background-color, scale 500ms;
@@ -457,12 +456,14 @@ main.correct {
   }
 
   .number-grid {
-    grid-template-columns: repeat(4, 95px);
-    grid-template-rows: repeat(4, 100px);
+    /* grid-template-columns: repeat(4, 95px);
+    grid-template-rows: repeat(4, 100px); */
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
   }
 
-  .answer {
-    min-width: 370px;
+  #answer-block {
+    min-width: 100%;
   }
 }
 
@@ -472,22 +473,26 @@ main.correct {
   } */
 
   #problem-block {
-    min-width: 275px;
+    min-width: 100%;
+    /* min-width: 275px; */
     max-width: fit-content;
     min-height: 120px;
   }
 
-  .answer {
-    min-width: 275px;
+  #answer-block {
+    min-width: 100%;
+    max-width: fit-content;
   }
-
+  
   .summary-popup-container {
     width: 260px;
   }
 
   .number-grid {
-    grid-template-columns: repeat(4, 70px);
-    grid-template-rows: repeat(4, 70px);
+    /* grid-template-columns: repeat(4, 70px); */
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(4, 25%);
+    /* grid-template-rows: repeat(4, 70px); */
   }
   .error-container {
     width: 260px;
