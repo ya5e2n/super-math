@@ -428,14 +428,18 @@ main.correct {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
   .summary-popup-container {
-    width: 325px;
+    width: 90%;
   }
+}
 
+@media screen and (max-width: 480px) {
   .number-grid {
     grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(4, 27%);
+    grid-template-rows: repeat(4, 28%);
+
+    margin-top: 15px;
   }
 }
 

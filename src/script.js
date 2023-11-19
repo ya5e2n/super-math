@@ -21,7 +21,7 @@ const number = document.querySelectorAll(".num"),
   version = document.querySelector("#version");
 
 // *** App Version ***
-version.innerHTML = "v0.0.32";
+version.innerHTML = "v0.0.33";
 
 var countCorrect = 0;
 var gameTimer = "";
